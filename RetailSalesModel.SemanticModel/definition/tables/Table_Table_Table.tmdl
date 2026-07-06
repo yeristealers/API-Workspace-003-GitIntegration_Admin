@@ -1,4 +1,4 @@
-table Table_Table
+table Table_Table_Table
 	lineageTag: 824053cb-4b5c-4bc8-8d1d-c74f66239c5c
 
 	column Column
@@ -10,7 +10,7 @@ table Table_Table
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Table_Table = calculated
+	partition Table_Table_Table = calculated
 		mode: import
 		source = Row("Column", BLANK())
 
