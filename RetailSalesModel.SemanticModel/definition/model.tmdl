@@ -15,5 +15,5 @@ annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
 ref table dimstore
 ref table dimproducts
 ref table factsales
-ref table Table
+ref table Table_Table
 
