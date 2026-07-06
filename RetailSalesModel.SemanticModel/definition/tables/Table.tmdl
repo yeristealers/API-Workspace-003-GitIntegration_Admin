@@ -1,0 +1,22 @@
+table Table
+	lineageTag: 824053cb-4b5c-4bc8-8d1d-c74f66239c5c
+
+	column Column
+		formatString: 0
+		lineageTag: e884ff98-c336-4c23-9453-a4355458c278
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 34678707aa7148c39c3c3c75c8ebd636
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":"ALL(dimproducts)"}
+
+	annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = We cannot commit this expression because it depends on Direct Lake or DirectQuery columns. Please configure the semantic model to use an explicit connection with granular access control to access this data source and retry.
+
