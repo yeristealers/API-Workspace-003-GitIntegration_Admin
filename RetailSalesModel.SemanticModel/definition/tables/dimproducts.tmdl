@@ -1,0 +1,56 @@
+table dimproducts
+	lineageTag: c597ea50-6bc5-4080-8716-7c183f55108e
+	sourceLineageTag: [dbo].[dimproducts]
+
+	column ProductId
+		dataType: string
+		lineageTag: 25f618b7-ece9-4adc-a67b-f8ba052c8aec
+		sourceLineageTag: ProductId
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 4e643bea-f83f-43e2-8714-ac546b122542
+		sourceLineageTag: ProductName
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: f940a877-4b26-418b-87ec-f14a2e40dd13
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: c1a3ad55-b2ce-4e6b-a7cf-81e8b6eb4bac
+		sourceLineageTag: Subcategory
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 91aad37d-2a8d-4518-8870-1d680a4c3f52
+		sourceLineageTag: Brand
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimproducts = entity
+		mode: directLake
+		source
+			entityName: dimproducts
+			schemaName: dbo
+			expressionSource: 'DirectLake - Lakehouse_Ontology'
+

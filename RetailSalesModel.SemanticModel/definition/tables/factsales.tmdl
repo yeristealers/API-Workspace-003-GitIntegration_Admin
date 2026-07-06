@@ -1,0 +1,70 @@
+table factsales
+	lineageTag: 1302d634-d1a8-4170-a458-0810c1b4c029
+	sourceLineageTag: [dbo].[factsales]
+
+	column SaleId
+		dataType: int64
+		formatString: 0
+		lineageTag: f8fb0198-9306-4d08-8a25-17fd8df91975
+		sourceLineageTag: SaleId
+		summarizeBy: count
+		sourceColumn: SaleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SaleDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2f9e9f5d-b334-4f4a-95ed-41027f78e883
+		sourceLineageTag: SaleDate
+		summarizeBy: none
+		sourceColumn: SaleDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreId
+		dataType: string
+		lineageTag: eef68588-b2c9-428d-a667-95eea5830115
+		sourceLineageTag: StoreId
+		summarizeBy: none
+		sourceColumn: StoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: string
+		lineageTag: c14eca06-0717-4932-a51d-9ded31d1f19b
+		sourceLineageTag: ProductId
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Units
+		dataType: int64
+		formatString: 0
+		lineageTag: 747843be-6a3d-40e1-bebf-cabdb8f7ceca
+		sourceLineageTag: Units
+		summarizeBy: sum
+		sourceColumn: Units
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevenueUSD
+		dataType: double
+		lineageTag: dfcb9f79-0c77-4ce2-a425-c11c7b411af9
+		sourceLineageTag: RevenueUSD
+		summarizeBy: sum
+		sourceColumn: RevenueUSD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition factsales = entity
+		mode: directLake
+		source
+			entityName: factsales
+			schemaName: dbo
+			expressionSource: 'DirectLake - Lakehouse_Ontology'
+

@@ -1,0 +1,8 @@
+relationship b0abe068-7833-5bf4-d98c-ccdca76df6e5
+	fromColumn: factsales.StoreId
+	toColumn: dimstore.StoreId
+
+relationship 8e5dbd06-cdbd-113c-c3f9-afcd5113ad02
+	fromColumn: factsales.ProductId
+	toColumn: dimproducts.ProductId
+
